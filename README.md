@@ -10,7 +10,7 @@ Simple progressive web app for converting Croatian kuna to European euro currenc
 - [ ] Update ServiceWorker to cache/fetch assets
 
 ### App Preview
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ### Links
 - Live Site URL: [Live Solution Preview](https://btopolnjak.github.io/pwa-currency-converter/)
