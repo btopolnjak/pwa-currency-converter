@@ -5,6 +5,6 @@ async () => {
     "Access-Control-Allow-Origin" : "*", 
     "Access-Control-Allow-Credentials" : true
   })
-  let serverResponse = resultsFromServer.json()
-  return serverResponse;
+  let serverResponse = await resultsFromServer.json()
+  return await serverResponse;
 }
