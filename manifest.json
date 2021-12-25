@@ -1,29 +1,29 @@
 {
     "name": "Currency Converter",
     "short_name": "Currency Converter",
-    "start_url": ".",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#004678",
     "theme_color": "#0096fa",
     "orientation": "portrait-primary",
     "icons": [
         {
-            "src": "./images/icon-512x512.png",
+            "src": "images/icon-512x512.png",
             "type": "image/png",
             "sizes": "512x512"
         },
         {
-            "src": "./images/icon-384x384.png",
+            "src": "images/icon-384x384.png",
             "type": "image/png",
             "sizes": "384x384"
         },
         {
-            "src": "./images/icon-256x256.png",
+            "src": "images/icon-256x256.png",
             "type": "image/png",
             "sizes": "256x256"
         },
         {
-            "src": "./images/icon-192x192.png",
+            "src": "images/icon-192x192.png",
             "type": "image/png",
             "sizes": "192x192"
         }
