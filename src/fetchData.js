@@ -6,8 +6,7 @@ async () => {
     method: "GET",
     headers: {
       "Content-Type": "application/json"
-    },
-    body: JSON.stringify(body)
+    }
   });
   console.log(resultsFromServer);
   let serverResponse = await resultsFromServer.json()
