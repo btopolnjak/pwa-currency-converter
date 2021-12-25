@@ -30,8 +30,7 @@ main {
 }
 
 header {
-    background-image: url("../images/ibrahim-boran-_aUwE2DnIPg-unsplash-500px.jpg");
-    background-color: var(--clr-secondary);
+    background: var(--clr-secondary) url("../images/didier-weemaels-unsplash-500px.jpg") no-repeat top/cover;
     background-blend-mode: multiply;
     display: flex;
     align-items: flex-end;

@@ -3,30 +3,32 @@ const staticCacheName = "site-static-v2";
 const assets = [
     "/",
     "/index.html",
-    "/src/app.js",
-    "/src/fetchData.js",
-    "/src/index.js",
+    "/favicon.ico",
     "/styles/styles.css",
-    "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;400;700&display=swap",
-    "https://fonts.gstatic.com/s/ibmplexsans/v9/zYX9KVElMYYaJe8bpLHnCwDKjR7_AIxsdP3pBmtF8A.woff2"
+    "/images/didier-weemaels-unsplash-500px.jpg",
+    "/images/icon-512x512.png",
+    "/images/icon-384x384.png",
+    "/images/icon-256x256.png",
+    "/images/icon-192x192.png",
 ];
 
-self.addEventListener("install", e => {
-    e.waitUntil(
-        caches.open(staticCacheName).then(cache => {
-            cache.addAll(assets);
-        })
+self.addEventListener('install', evt => {
+    evt.waitUntil(
+      caches.open(staticCacheName).then((cache) => {
+        console.log('caching shell assets');
+        cache.addAll(assets);
+      })
     );
 });
 
-self.addEventListener("activate", e => {
-    console.log("service worker activated");
+self.addEventListener('install', evt => {
+    console.log('service worker installed');
+});
+  
+self.addEventListener('activate', evt => {
+    console.log('service worker activated');
 });
 
-self.addEventListener("fetch", e => {
-    e.respondWith(
-        caches.match(e.request).then(cacheRes => {
-            return cacheRes || fetch(e.request);
-        })
-    );
+self.addEventListener('fetch', evt => {
+    console.log('fetch event', evt);
 });
