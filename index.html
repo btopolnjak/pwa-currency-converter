@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0096fa">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" href="./images/icon-192x192.png">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="./images/icon-192x192.png">
+    <script src="./src/app.js" type="module"></script>
+    <script src="./src/index.js" defer></script>
+    <title>Currency Converter</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Currency<br>Converter</h1>
+            <p id="updated">15.12.2021.</p>
+        </header>
+        <aside class="flex-center selected">
+            <h3 class="direction-down">HRK</h3>
+        </aside>
+        <input type="number" value="0" id="currencyTop" class="selected" >
+        <aside class="flex-center">
+            <h3 class="direction-up">EUR</h3>
+        </aside>
+        <input type="number" value="0" id="currencyBottom">
+        <article class="flex-center">
+            <p id="currentRate"></p>
+        </article>
+        <button id="buying">Buying rate</button>
+        <button id="mean" class="selected">Mean rate</button>
+        <button id="selling">Selling rate</button>
+    </main>
+</body>
+</html>
