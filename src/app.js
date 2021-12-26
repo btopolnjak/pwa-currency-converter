@@ -15,7 +15,7 @@ const documentButtons = [
     { selector: document.getElementById("selling"), value: 1 }
 ];
 
-let selectedRate;
+let selectedRate = 1;
 
 
 fetchData().then(data => {
@@ -24,7 +24,7 @@ fetchData().then(data => {
     documentButtons[2].value = parseFloat((data[12]['Prodajni za devize']).replace(",", "."));
     dateUpdated.textContent = `Updated: ${data[12]['Datum primjene']}.`;
     selectedRate = documentButtons[1].value;
-});
+}).catch(() => { dateUpdated.textContent = "Server offline" });
 
 Object.values(documentInputs).forEach(e => {
     e.addEventListener("keyup", () => {
