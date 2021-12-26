@@ -1,7 +1,7 @@
 export default
 
 async () => {
-  let resultsFromServer = await fetch('http://127.0.0.1:3010/');
+  let resultsFromServer = await fetch('http://boris.letis.hr:3010/');
   let serverResponse = await resultsFromServer.json();
   return await serverResponse;
 }
